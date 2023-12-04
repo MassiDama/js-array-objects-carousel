@@ -33,32 +33,34 @@ const images = [
 
 
 //  usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.
-const container = document.querySelector(".container");
+const slide = document.querySelector(".slider");
 
-images.forEach((element) => {
+images.forEach((element, index) => {
 
-    container.innerHTML +=  `<div class="item">
-                                    <img src="${element.image}" alt="photo cartoon">
-                                    <h3> ${element.title} </h3>
-                                    <span> ${element.text} </span>
-                             </div>`;
+    console.log(index);
+
+    if (index === 0) {
+
+        slide.innerHTML +=  `<div class="item active">
+                                <img src="${element.image}" alt="photo cartoon">
+                                <h3> ${element.title} </h3>
+                                <span> ${element.text} </span>
+                            </div>`;
+    } else {
+
+        slide.innerHTML +=  `<div class="item">
+                                 <img src="${element.image}" alt="photo cartoon">
+                                 <h3> ${element.title} </h3>
+                                 <span> ${element.text} </span>
+                            </div>`;
+    }
 
 });
 
 
-
-
-
-
-
-// Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
-
-
-
-
-
 const items = document.getElementsByClassName ("item");
 console.log (items[0]);
+
 
 let activeItem = 0;
 
