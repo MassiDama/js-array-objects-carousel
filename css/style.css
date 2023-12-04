@@ -58,3 +58,18 @@
 .next {
     bottom: 10px;
 }
+
+h3 {
+    position: absolute;
+    padding: 10px;
+    bottom: 70px;
+    color: white;
+}
+
+span {
+    position: absolute;
+    bottom: 0px;
+    width: 60%;
+    padding: 10px;
+    color: white;
+}
